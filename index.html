@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html id="ng-app" ng-app="Alt" xmlns:ng="http://angularjs.org">
+<head lang="en">
+    <meta charset="utf-8">
+    <title>Uno :: Let's Have Fun!</title>
+    <link type="text/css" rel="stylesheet" media="all" href="asset/lib/bootstrap2.3.2/bootstrap/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" media="all" href="asset/lib/bootstrap2.3.2/bootstrap/css/bootstrap-responsive.min.css">
+    <link type="text/css" rel="stylesheet" media="all" href="asset/lib/fontawesome/css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" media="all" href="asset/css/style.css">
+    <link rel="shortcut icon" href="favicon.ico">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div data-ng-view></div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="asset/lib/angular/angular.min.js"></script>
+    <script type="text/javascript" src="asset/lib/alt-angularjs/dist/alt.js"></script>
+
+    <script type="text/javascript" src="asset/lib/angular-route/angular-route.min.js"></script>
+    <script type="text/javascript" src="asset/lib/alt-angularjs/dist/alt/route.js"></script>
+
+    <script type="text/javascript" src="config.js"></script>
+    <script type="text/javascript" src="asset/lib/requirejs/require.js"></script>
+    <script type="text/javascript">
+        requirejs.config({
+            urlArgs: alt.urlArgs,
+            paths : {
+                text: 'asset/lib/requirejs-plugins/lib/text',
+                async: 'asset/lib/requirejs-plugins/src/async',
+                font: 'asset/lib/requirejs-plugins/src/font',
+                goog: 'asset/lib/requirejs-plugins/src/goog',
+                image: 'asset/lib/requirejs-plugins/src/image',
+                json: 'asset/lib/requirejs-plugins/src/json',
+                noext: 'asset/lib/requirejs-plugins/src/noext',
+                mdown: 'asset/lib/requirejs-plugins/src/mdown',
+                propertyParser : 'asset/lib/requirejs-plugins/src/propertyParser',
+                markdownConverter : 'asset/lib/plugins/lib/Markdown.Converter'
+            }
+        });
+    </script>
+</body>
+</html>

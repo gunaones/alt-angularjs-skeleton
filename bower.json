@@ -1,0 +1,11 @@
+{
+  "name": "alt-angularjs-skeleton",
+  "version": "1.0.0",
+  "private": "true",
+  "dependencies": {
+    "alt-angularjs": "*",
+    "angular-route": "~1.4.3",
+    "fontawesome": "~4.3.0",
+    "bootstrap2.3.2": "~2.3.2"
+  }
+}
