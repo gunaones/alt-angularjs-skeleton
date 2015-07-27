@@ -1,0 +1,21 @@
+<link rel="stylesheet" href="asset/css/ng-table.min.css"/>
+<table data-ng-table="obj_table" class="table table-bordered">
+    <thead>
+    <tr>
+        <th>Tanggal</th>
+        <th>Judul</th>
+        <th>Status</th>
+        <th>MD5 Hash</th>
+        <th>Aksi</th>
+    </tr>
+    </thead>
+    <tr data-ng-repeat="data in obj_table.data">
+        <td>{{ data.tanggal }}</td>
+        <td>{{ data.judul }}</td>
+        <td>{{ data.status }}</td>
+        <td>{{ data.MD5hash }}</td>
+        <td>
+            <button data-ng-click="test($index)" class="btn btn-default">Broadcast</button>
+        </td>
+    </tr>
+</table>

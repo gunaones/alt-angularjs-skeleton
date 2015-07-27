@@ -1,0 +1,47 @@
+<div data-alt-wizard="data-alt-wizard">
+    <div data-alt-step="step1">
+        <h1>Form Wizard</h1>
+        <div class="row-fluid">
+            <div class="span12">Lengkapi seluruh form berikut</div>
+        </div>
+    </div>
+    <div data-alt-step="step2">
+        <h1>Content Step1</h1>
+        <div class="row-fluid">
+            <div class="span12">
+                <form role="form" name="formStep1" class="form-horizontal">
+                    <div data-ng-class="{error : (!$validate.required(step2.data.name))}" class="control-group">
+                        <label for="name" class="control-label">Nama</label>
+                        <div class="controls">
+                            <input type="text" data-ng-model="step2.data.name" required="required" maxlength="100" class="span10"/><span data-ng-show="!$validate.required(step2.data.name)" class="help-inline">* harus diisi</span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div data-alt-step="step3">
+        <h1>Content Step2</h1>
+        <div class="row-fluid">
+            <div class="span12">
+                <form role="form" name="formStep2" class="form-horizontal">
+                    <div data-ng-class="{error : (!$validate.required(step3.data.title))}" class="control-group">
+                        <label for="title" class="control-label">Judul</label>
+                        <div class="controls">
+                            <input type="text" data-ng-model="step3.data.title" required="required" maxlength="100" class="span10"/><span data-ng-show="!$validate.required(step3.data.title)" class="help-inline">* harus diisi</span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div data-alt-step="step4">
+        <h1>Content Step3</h1>
+        <div class="row-fluid">
+            <div class="span12">
+                Divisi: {{ step2.data | json }}
+                Unit: {{ step3.data | json }}
+            </div>
+        </div>
+    </div>
+</div>

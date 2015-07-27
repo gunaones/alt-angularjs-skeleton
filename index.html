@@ -2,7 +2,7 @@
 <html id="ng-app" ng-app="Alt" xmlns:ng="http://angularjs.org">
 <head lang="en">
     <meta charset="utf-8">
-    <title>Uno :: Let's Have Fun!</title>
+    <title>Alt-AngularJS :: Javascript Client Framework!</title>
     <link type="text/css" rel="stylesheet" media="all" href="asset/lib/bootstrap2.3.2/bootstrap/css/bootstrap.min.css">
     <link type="text/css" rel="stylesheet" media="all" href="asset/lib/bootstrap2.3.2/bootstrap/css/bootstrap-responsive.min.css">
     <link type="text/css" rel="stylesheet" media="all" href="asset/lib/fontawesome/css/font-awesome.min.css">
@@ -10,6 +10,17 @@
     <link rel="shortcut icon" href="favicon.ico">
 </head>
 <body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <a class="brand" data-ng-href="{{ alt.baseUrl }}">
+                <i class="fa fa-paper-plane"></i>
+                Alt - AngularJS
+            </a>
+            <div data-ng-include="alt.menu" class="nav-collapse collapse"></div>
+            <div style="opacity: 0; margin-top: 40px; z-index: 999; -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)'; filter: alpha(opacity=0);" data-ng-show="menu.submenu != ''" data-ng-click="menu.submenu = ''" class="modal-backdrop fade in"></div>
+        </div>
+    </div>
+
     <div class="container-fluid">
         <div class="row-fluid">
             <div data-ng-view></div>
