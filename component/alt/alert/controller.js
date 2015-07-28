@@ -11,7 +11,8 @@ define([
             iscloseable: '=?',
             type: '@?',
             message: '@?',
-            onclose: '&?'
+            onclose: '&?',
+            test: '=?'
         },
         link: ['$scope', '$log', function($scope, $log){
             $scope.setting = alt.extend({
